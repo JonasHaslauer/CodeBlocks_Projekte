@@ -1,0 +1,29 @@
+lat	lon	title	description	icon	iconSize	iconOffset
+47.80208666428231	13.044696183497496	Salzburg surft Hotspot - BRICKS Music-Bar	 <a href="http://www.salzburg-surft.at/hotspot-locations/bricks-music-bar/">http://www.salzburg-surft.at/hotspot-locations/bricks-music-bar/</a> 
+47.78330855822309	13.080045699456964	Salzburg surft Hotspot - BWS Aigen	 <a href="http://www.salzburg-surft.at/hotspot-locations/bws-aigen/ ">http://www.salzburg-surft.at/hotspot-locations/bws-aigen/ </a> 
+47.80891311800401	13.061969610720691	Salzburg surft Hotspot - BWS Gnigl	 <a href="http://www.salzburg-surft.at/hotspot-locations/bws-gnig/">http://www.salzburg-surft.at/hotspot-locations/bws-gnig/</a> 
+47.82475165387156	13.045492617811695	Salzburg surft Hotspot - BWS Itzling	 <a href="http://www.salzburg-surft.at/hotspot-locations/bws-itzling/">http://www.salzburg-surft.at/hotspot-locations/bws-itzling/</a> 
+47.788189707412734	13.07633640575754	Salzburg surft Hotspot - Cafe Dialog	 <a href="http://www.salzburg-surft.at/hotspot-locations/cafe-dialog/">http://www.salzburg-surft.at/hotspot-locations/cafe-dialog/</a> 
+47.78956567199874	13.035478347359131	Salzburg surft Hotspot - Freibad Leopoldskron	 <a href="http://www.salzburg-surft.at/hotspot-locations/freibad-leopoldskron/">http://www.salzburg-surft.at/hotspot-locations/freibad-leopoldskron/</a> 
+47.77606246966332	13.071751307716475	Salzburg surft Hotspot - Gesundheitszentrum Sued	 <a href="http://www.salzburg-surft.at/hotspot-locations/gsz-sued/">http://www.salzburg-surft.at/hotspot-locations/gsz-sued/</a> 
+47.81017702593366	13.030521686296531	Salzburg surft Hotspot - Inge-Morath-Platz	 <a href="http://www.salzburg-surft.at/hotspot-locations/inge-morath-platz/">http://www.salzburg-surft.at/hotspot-locations/inge-morath-platz/</a> 
+47.80712622357241	13.066010187997676	Salzburg surft Hotspot - Jugendzentrum get2gether	 <a href="http://www.salzburg-surft.at/hotspot-locations/juz-get2gether/">http://www.salzburg-surft.at/hotspot-locations/juz-get2gether/</a> 
+47.80632504270535	13.046060483983911	Salzburg surft Hotspot - Jugendzentrum IGLU	 <a href="http://www.salzburg-surft.at/hotspot-locations/juz-iglu/">http://www.salzburg-surft.at/hotspot-locations/juz-iglu/</a> 
+47.78790875216644	13.019630581864392	Salzburg surft Hotspot - Jugendzentrum KOMM	 <a href="http://www.salzburg-surft.at/hotspot-locations/juz-komm/">http://www.salzburg-surft.at/hotspot-locations/juz-komm/</a> 
+47.81463693761094	13.026230174761325	Salzburg surft Hotspot - Jugendzentrum Lehen	 <a href="http://www.salzburg-surft.at/hotspot-locations/juz-lehen/">http://www.salzburg-surft.at/hotspot-locations/juz-lehen/</a> 
+47.81106329021125	13.006274636108788	Salzburg surft Hotspot - Jugendzentrum Taxham	 <a href="http://www.salzburg-surft.at/hotspot-locations/juz-taxham/">http://www.salzburg-surft.at/hotspot-locations/juz-taxham/</a> 
+47.79704378324846	13.051839540152114	Salzburg surft Hotspot - Kajetanerplatz	 <a href="http://www.salzburg-surft.at/hotspot-locations/kajetanerplatz/">http://www.salzburg-surft.at/hotspot-locations/kajetanerplatz/</a> 
+47.79691158787558	13.046628065352198	Salzburg surft Hotspot - Kapitelplatz	 <a href="http://www.salzburg-surft.at/hotspot-locations/kapitelplatz/">http://www.salzburg-surft.at/hotspot-locations/kapitelplatz/</a> 
+47.801704568083714	13.04214719528929	Salzburg surft Hotspot - Makartsteg	 <a href="http://www.salzburg-surft.at/hotspot-locations/makartsteg/">http://www.salzburg-surft.at/hotspot-locations/makartsteg/</a> 
+47.804564853462836	13.043145395240149	Salzburg surft Hotspot - Mirabellgarten	 <a href="http://www.salzburg-surft.at/hotspot-locations/mirabellgarten/">http://www.salzburg-surft.at/hotspot-locations/mirabellgarten/</a> 
+47.798688278267	13.047936761961587	Salzburg surft Hotspot - Mozartplatz	 <a href="http://www.salzburg-surft.at/hotspot-locations/mozartplatz/">http://www.salzburg-surft.at/hotspot-locations/mozartplatz/</a> 
+47.80040727226709	13.044893879702833	Salzburg surft Hotspot - Rathaus	 <a href="http://www.salzburg-surft.at/hotspot-locations/rathaus-salzburg/">http://www.salzburg-surft.at/hotspot-locations/rathaus-salzburg/</a> 
+47.813591021619935	13.027612786249824	Salzburg surft Hotspot - Stadt:Bibliothek Salzburg	 <a href="http://www.salzburg-surft.at/hotspot-locations/stadtbibliothek-salzburg/">http://www.salzburg-surft.at/hotspot-locations/stadtbibliothek-salzburg/</a> 
+47.79643460980809	13.060197478354686	Salzburg surft Hotspot - Volksgarten	 <a href="http://www.salzburg-surft.at/hotspot-locations/volksgarten/">http://www.salzburg-surft.at/hotspot-locations/volksgarten/</a> 
+47.76281638251832	13.060395900792235	Salzburg surft Hotspot - Hellbrunn Wasserspiele Kassa	 <a href="Aufstelljahr: 2013
+">Aufstelljahr: 2013
+</a> 
+47.76284883856024	13.065363326629926	Salzburg surft Hotspot - Hellbrunn Spielplatz/Park	 <a href="Aufstelljahr: 2013
+">Aufstelljahr: 2013
+</a> 
+47.82262505699751	13.04107044930563	Salzburg surft Hotspot - CoWorkingSpace Salzburg	 <a href="http://www.salzburg-surft.at/hotspot-locations/coworking-space-salzburg/">http://www.salzburg-surft.at/hotspot-locations/coworking-space-salzburg/</a> 

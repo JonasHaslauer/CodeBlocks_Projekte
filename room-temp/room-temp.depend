@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1443711315 source:/home/jonas/Dokumente/FSST/room-temp/main.c
+	<stdio.h>
+	<stdlib.h>
+	"string.h"
+

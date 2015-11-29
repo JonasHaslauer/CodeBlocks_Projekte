@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1443010264 source:/home/jonas/Dokumente/FSST/05_Rek_pow/main.c
+	<stdio.h>
+	<stdlib.h>
+

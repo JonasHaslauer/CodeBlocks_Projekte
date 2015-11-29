@@ -1,0 +1,4 @@
+3
+Schlafzimmer:20
+Kueche:25
+Keller:15

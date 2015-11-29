@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1445525536 source:/home/jonas/Dokumente/FSST/11_Cpp02_Rect/main.cpp
+	<iostream>
+	"Rectangle.h"
+
+1445525997 /home/jonas/Dokumente/FSST/11_Cpp02_Rect/include/Rectangle.h
+	<string>
+

@@ -1,0 +1,23 @@
+# depslib dependency file v1.0
+1448550732 source:/home/jonas/Dokumente/FSST/BankFriend/Account.cpp
+	<string>
+	<iostream>
+	<sstream>
+	"Account.h"
+
+1448550765 /home/jonas/Dokumente/FSST/BankFriend/Account.h
+	<iostream>
+	<string>
+
+1448550748 source:/home/jonas/Dokumente/FSST/BankFriend/main.cpp
+	<string>
+	<iostream>
+	<sstream>
+	"Bank.h"
+	"Account.h"
+
+1448550760 /home/jonas/Dokumente/FSST/BankFriend/Bank.h
+	<string>
+	<vector>
+	"Account.h"
+

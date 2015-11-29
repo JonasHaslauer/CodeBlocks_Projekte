@@ -1,0 +1,190 @@
+﻿=============================================================================
+Konstanten bei C/C++: const-cpp-c.txt
+=============================================================================
+http://www2.informatik.uni-halle.de/lehre/c/index.html
+http://www.parashift.com/c++-faq/const-correctness.html
+
+
+----------------------------------------------------------------------------
+Symbolische Konstante
+----------------------------------------------------------------------------
+K&R-C kennt nur symbolische Konstanten, die mit Hilfe der 
+Präprozessor-Direktive  #define definiert werden können.
+
+  #define M 100
+  #define N 2*M
+
+Im C-Quelltext, der dem Compiler übergeben wird, erscheinen an den Positionen, 
+an denen symbolische Konstanten standen, Literale.
+
+Symbolische Konstanten werden rein formal ersetzt, der Präprozessor ist 
+nicht in der Lage, Typprüfungen durchzuführen.
+
+
+
+----------------------------------------------------------------------------
+Der Typ-Modofizierer const
+----------------------------------------------------------------------------
+Mit ANSI-C wurde das Schlüsselwort const als sogenannter 
+Typ-Modifizierer eingeführt:
+Einer Variablen-Deklaration kann das Schlüsselwort const vorangestellt werden. 
+Der Wert der derart deklarierten Variablen kann 
+nicht durch direkte Zuweisungen verändert werden.
+
+Beispiel:
+
+  const n = 100;              /* Typ  int  wird angenommen */
+  const float eps = 0.005;
+
+  const int* pc;             /* Zeiger auf konstantes Integer */
+  int* const cp;             /* konstanter Zeiger auf Integer */
+
+
+Es handelt sich dabei jedoch nicht um echte Konstanten. 
+Die Werte sind zwar nicht auf direktem Wege veränderbar, es gibt jedoch 
+indirekte Wege zur Manipulation.
+
+Beispiel:
+
+  const int i = 5;
+
+  i = 10;                 /* !!! Fehler !!! */
+  i++;                    /* !!! Fehler !!! */
+
+
+Das folgende Beispiel zeigt, daß es ohne großem Aufwand möglich ist, 
+den Wert von "Konstanten" zu manipulieren:
+
+// test-const.c
+// gcc test-const.c -o test-const.exe
+
+#include <stdio.h>
+
+int main(void){
+	const int* const_ptr;
+	int* ptr;
+	const int const_value = 0;
+
+	printf("Konstante const_value = %i\n", const_value);     /* liefert  0  */
+	const_ptr= &const_value;
+	ptr = (int *) const_ptr;
+	*ptr = 1;
+	printf("Konstante const_value = %i\n", const_value);     /* liefert  1  */
+
+	return 0;
+}
+/* Ausgabe:
+Konstante const_value = 0
+Konstante const_value = 1
+*/
+
+
+
+Wird const im Zusammenhang mit anderen Deklarationsanweisungen verwendet, 
+so ist sehr genau auf die jeweilige Wirkung zu achten.
+
+Beispiel:
+
+  const struct s { int a, b; } x;             /*  x  konstant  */
+  struct s  y;                                /*  y  nicht konstant  */
+
+  typedef const struct s { int a, b; } stype;
+  stype x;                                    /*  x  konstant  */
+  stype y;                                    /*  y  konstant  */
+
+
+
+Beispiel:
+// test-const-ptr.c
+// gcc test-const-ptr.c -o test-const-ptr.exe
+
+#include <stdio.h>
+
+int main(void){
+	char* mybuf= "12345";
+	char* yourbuf= "abcde";
+	
+	char* const const_buf_ptr = mybuf;     /* konstanter Zeiger */
+
+	*const_buf_ptr = 'a';
+
+	const_buf_ptr++;                       /* !!! Fehler !!! */         
+	const_buf_ptr = yourbuf;               /* !!! Fehler !!! */
+
+	return 0;
+}
+/* Ausgabe:
+test-const-ptr.c: In function ‘main’:
+test-const-ptr.c:14: error: increment of read-only variable ‘const_buf_ptr’
+test-const-ptr.c:15: error: assignment of read-only variable ‘const_buf_ptr’
+*/
+
+
+Die Anwendungsmöglichkeiten von const in C und C++ unterscheiden sich ein wenig.
+Beispiel:
+
+  const int max = 255;
+  int array[max];             /* Legal in C++, 
+                                 nicht zulaessig in den meisten C Systemen,
+                                 ausser C99 Standard */
+
+In ANSI C kann in dieser Situation nur mit symbolischen Konstanten gearbeitet werden:
+
+  #define max 255
+  int array[max];
+
+
+
+Hier noch ein Beispiel:
+------------------------
+// mab-const-ptr.c
+// gcc mab-const-ptr.c -o mab-const-ptr.exe
+
+#include <stdio.h>
+
+int main(void){
+	char* const p1 = "John";	// p1 ist const, wert ist nicht const
+	*p1='A';					// erlaubt
+	//p1= "abc"; 				// nicht erlaubt, weil p1 const ist
+
+
+
+	const char* p2 = "Mary";	// p2 ist nicht const, wert ist const
+	//*p2 = 'C'; 				// nicht erlaubt, weil wert const
+	p2 = "Margareth";  			// erlaubt, weil p2 nicht const ist
+
+	return 0;
+}
+
+
+
+
+----------------------------------------------------------------------------
+MAB-Fragen: Der Typ-Modofizierer const: mab-const.txt (12/2)
+----------------------------------------------------------------------------
+
+1) Streichen Sie das Wort nicht an den richtigen Stellen durch.
+
+  const struct s { int a, b; } x;             /*  x  nicht konstant  */
+  struct s  y;                                /*  y  nicht konstant  */
+
+  typedef const struct s { int a, b; } stype;
+  stype x;                                    /*  x  nicht konstant  */
+  stype y;                                    /*  y  nicht konstant  */
+
+
+2)
+int main(void){
+	char* const p1 = "John";	// p1 ist nicht const, wert ist nicht const
+	*p1='A';					// nicht erlaubt
+	p1= "abc"; 					// nicht erlaubt, weil p1 nicht const ist
+
+
+
+	const char* p2 = "Mary";	// p2 ist nicht const, wert ist nicht const
+	*p2 = 'C'; 					// nicht erlaubt, weil wert nicht const
+	p2 = "Margareth";  			// nicht erlaubt, weil p2 nicht const ist
+
+	return 0;
+}
+

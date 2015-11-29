@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1442841425 source:/home/jonas/Dokumente/FSST/Testspass23/main.c
+	<stdio.h>
+	<stdlib.h>
+

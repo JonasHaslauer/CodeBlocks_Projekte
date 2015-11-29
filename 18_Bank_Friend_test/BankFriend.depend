@@ -1,0 +1,51 @@
+# depslib dependency file v1.0
+1448550732 source:/home/jonas/Dokumente/FSST/BankFriend/Account.cpp
+	<string>
+	<iostream>
+	<sstream>
+	"Account.h"
+
+1448550765 /home/jonas/Dokumente/FSST/BankFriend/Account.h
+	<iostream>
+	<string>
+
+1448550748 source:/home/jonas/Dokumente/FSST/BankFriend/main.cpp
+	<string>
+	<iostream>
+	<sstream>
+	"Bank.h"
+	"Account.h"
+
+1448550760 /home/jonas/Dokumente/FSST/BankFriend/Bank.h
+	<string>
+	<vector>
+	"Account.h"
+
+1448550732 source:/home/jonas/Dokumente/FSST/18_Bank_Friend_test/Account.cpp
+	<string>
+	<iostream>
+	<sstream>
+	"Account.h"
+
+1448551520 /home/jonas/Dokumente/FSST/18_Bank_Friend_test/Account.h
+	<iostream>
+	<string>
+
+1448553775 source:/home/jonas/Dokumente/FSST/18_Bank_Friend_test/Bank.cpp
+	<string>
+	<iostream>
+	<sstream>
+	<math.h>
+	"Bank.h"
+	"Account.h"
+
+1448553286 /home/jonas/Dokumente/FSST/18_Bank_Friend_test/Bank.h
+	<string>
+	<vector>
+	"Account.h"
+
+1448553842 source:/home/jonas/Dokumente/FSST/18_Bank_Friend_test/main.cpp
+	<iostream>
+	"Bank.h"
+	"Account.h"
+

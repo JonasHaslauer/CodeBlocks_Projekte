@@ -1,0 +1,12 @@
+# depslib dependency file v1.0
+1445524662 source:/home/jonas/Dokumente/FSST/10_Cpp01/fraction.cpp
+	"fraction.h"
+	<sstream>
+
+1445524726 /home/jonas/Dokumente/FSST/10_Cpp01/fraction.h
+	<string>
+
+1445524254 source:/home/jonas/Dokumente/FSST/10_Cpp01/test-fraction.cpp
+	<iostream>
+	"fraction.h"
+

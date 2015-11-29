@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1446631750 source:/home/jonas/Dokumente/FSST/12_Suche03/main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+

@@ -1,0 +1,19 @@
+# depslib dependency file v1.0
+1444312757 source:/home/jonas/Dokumente/FSST/08_OpenData/getCSV.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<unistd.h>
+	<time.h>
+
+1444915911 source:/home/jonas/Dokumente/FSST/08_OpenData/hotspotMain.c
+	<stdio.h>
+	<stdlib.h>
+	"hotspot.h"
+
+1444902050 /home/jonas/Dokumente/FSST/08_OpenData/hotspot.h
+
+1444915008 source:/home/jonas/Dokumente/FSST/08_OpenData/hotspot.c
+	"hotspot.h"
+	<string.h>
+

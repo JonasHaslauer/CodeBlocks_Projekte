@@ -1,0 +1,57 @@
+# depslib dependency file v1.0
+1447238546 source:c:\users\marcel\desktop\mace\schui\fsst\c\student\main.cpp
+	<iostream>
+	"student.h"
+	"schoolclass.h"
+
+1447238546 ss.h"
+
+1447235379 c:\users\marcel\desktop\mace\schui\fsst\c\student\student.h
+	<stdio.h>
+	"string"
+
+1447235379 
+
+1447235379 c:\users\marcel\desktop\mace\schui\fsst\c\student\schoolclass.h
+	<stdio.h>
+	<string>
+	<vector>
+	"student.h"
+
+1447235379 "
+
+1447238666 source:c:\users\marcel\desktop\mace\schui\fsst\c\student\schoolclass.cpp
+	"schoolclass.h"
+	"student.h"
+	<sstream>
+	<vector>
+
+1447235379 source:c:\users\marcel\desktop\mace\schui\fsst\c\student\student.cpp
+	"student.h"
+	<sstream>
+
+1447238668 source:/home/jonas/Dokumente/FSST/14_Student/schoolclass.cpp
+	"schoolclass.h"
+	"student.h"
+	<sstream>
+	<vector>
+
+1447235380 /home/jonas/Dokumente/FSST/14_Student/schoolclass.h
+	<stdio.h>
+	<string>
+	<vector>
+	"student.h"
+
+1447235380 /home/jonas/Dokumente/FSST/14_Student/student.h
+	<stdio.h>
+	"string"
+
+1447338597 source:/home/jonas/Dokumente/FSST/14_Student/student.cpp
+	"student.h"
+	<sstream>
+
+1447338566 source:/home/jonas/Dokumente/FSST/14_Student/main.cpp
+	<iostream>
+	"student.h"
+	"schoolclass.h"
+
