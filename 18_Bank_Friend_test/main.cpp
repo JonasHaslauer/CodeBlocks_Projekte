@@ -10,9 +10,8 @@ using namespace std;
 
 int main(){
 	Bank *myBank;
-	myBank = new Bank("Hofmann unlimited");
+	myBank = new Bank("Zinger unlimited");
 
-	cout << "\n\n"<<endl;
 	cout << "-------------------------------------------------"<<endl;
 	cout << " TEST: STATIC members "<<endl;
 	cout << "-------------------------------------------------"<<endl;
@@ -25,9 +24,8 @@ int main(){
 	cout << myBank->toString() << endl;
 
 
-	cout << "\n\n"<<endl;
-	cout << ".... delete Account: Anton Hofmann and add Account: Omega Hofmann";
-	cout << " Look at the account number!!!"<<endl;
+	cout << "--- Delete Account: Anton Hofmann and add Account: Omega Hofmann ---" << endl;
+	cout << "Look at the account number!!!"<<endl;
 
 	myBank->delAccount("Anton Hofmann");
 	myBank->addAccount("Omega Hofmann", 900.0);
@@ -35,14 +33,10 @@ int main(){
 	cout << myBank->toString() << endl;
 	cout << endl;
 
-
-	cout << "\n\n"<<endl;
 	cout << "-------------------------------------------------"<<endl;
 	cout << " TEST: FRIEND class "<<endl;
 	cout << "-------------------------------------------------"<<endl;
 	cout << " ONLY class bank can create new Account-objects" <<endl;
-
-//	Account k1("Anton Hofmann", 123.0); 	// error, because cons is private
 
 	int accountNr= myBank->addAccount("Anton Hofmann", 100.0);
 	myBank->getAccount(accountNr).deposit(9000.0);
@@ -66,14 +60,14 @@ int main(){
 	cout << "... 3. myBank->delAccount(myBank->getAverageAmount()); "<<endl;
 	cout << "...    delete all Account having less then the average amount"<<endl;
 	cout << "...    Average Amount= " << myBank->getAverageAmount() << endl<<endl;
-//	myBank->delAccount(myBank->getAverageAmount());
+	myBank->delAccount(myBank->getAverageAmount());
 
 	cout << myBank->toString() << endl;
 	cout << endl;
 
-/*	d= myBank->getStandardDeviation();
+	d= myBank->getStandardDeviation();
 	cout << "Standard Deviation = " << d << endl << endl;
-*/
+
 	delete myBank;
 
 	return 0;

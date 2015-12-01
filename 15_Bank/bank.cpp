@@ -9,7 +9,7 @@ Bank::Bank(string name){
 
 Bank::~Bank(){
     for(int i = 0; i < accounts_.size(); i++){
-        delete(accounts_[i]);
+        delete accounts_[i];
     }
 }
 
@@ -37,14 +37,21 @@ void Bank::charges(double d){
     }
 }
 
-void addInterest(double d){
+void Bank::addInterest(double d){
+    vector<Account*>::iterator it;
+
+	for (it = accounts_.begin(); it != accounts_.end(); it++)
+	{
+		double newValue = (*it)->getAmount() + d;
+		(*it)->setAmount(newValue);
+	}
 }
 
 void Bank::addAccount(Account& account){
     accounts_.push_back(&account);
 }
 
-void delAccount(Account& account){
+void Bank::delAccount(Account& account){
     vector<Account*>::iterator it;
 
     for(it = accounts_.begin(); it != accounts_.end(); it++){

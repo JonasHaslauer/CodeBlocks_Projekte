@@ -20,7 +20,7 @@ private:
 
 public:
 
-    ~Account(){cout << "Account destr called ... " <<endl;}
+    ~Account();
 
 	string toString() const;
 
@@ -28,10 +28,16 @@ public:
 	{
 		return amount_;
 	}
+
+	int getNumber() const{
+        return number_;
+	}
+
 	void setAmount(double d)
 	{
 		amount_ = d;
 	}
+
 	void deposit(double d){setAmount(getAmount()+d);}
 
 };

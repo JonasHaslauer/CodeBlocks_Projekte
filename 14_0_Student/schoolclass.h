@@ -17,7 +17,7 @@ private:
 public:
     schoolclass(string name);
     string toString() const;
-    void add( Student& aStudent);
+    void add(Student& aStudent);
     Student getMassiest();
 };
 

@@ -21,6 +21,10 @@ Account::Account(string name, double d)
 	amount_ = d;
 }
 
+Account::~Account(){
+    cout << "*** destroying account #" << this->number_ << " ***" << endl;
+}
+
 string Account::toString() const
 {
 	ostringstream os;

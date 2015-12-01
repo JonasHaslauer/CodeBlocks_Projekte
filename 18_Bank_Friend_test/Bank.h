@@ -20,6 +20,7 @@ class Bank{
 
         int addAccount(string owner, double d);
         void delAccount(string owner);
+        void delAccount(double reqAmount);
 
         Account& getAccount(int nr);
 

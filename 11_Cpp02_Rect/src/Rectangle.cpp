@@ -23,11 +23,10 @@ string Rectangle::toString() const{
     ostringstream os;
 
     for(int i = 0; i < width; i++){
-        for(int j; j < length; j++){
+        for(int j = 0; j < length; j++){
             os << "*";
         }
         os << endl;
     }
-
     return os.str();
 }

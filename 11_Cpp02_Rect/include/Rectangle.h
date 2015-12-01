@@ -9,12 +9,12 @@ class Rectangle
     public:
         Rectangle(int l = 1, int w = 1);
         Rectangle(const Rectangle& other);
-        int getArea(Rectangle other);
+        int getArea();
         string toString() const;
 
     private:
-    int length;
-    int width;
+        int length;
+        int width;
 };
 
 #endif // RECTANGLE_H

@@ -11,6 +11,10 @@ Account::Account(string name, double d){
     amount_ = d;
 }
 
+Account::~Account(){
+    cout << "Account-Destructor called..." << endl;
+}
+
 string Account::toString() const{
     ostringstream os;
 

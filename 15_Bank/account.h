@@ -14,7 +14,7 @@ class Account{
 
     public:
         Account(string name, double d);
-        ~Account(){ cout << "Account-Destructor called..." << endl; }
+        ~Account();
 
         double getAmount() const {return amount_;}
         void setAmount(double d) {amount_ = d;}

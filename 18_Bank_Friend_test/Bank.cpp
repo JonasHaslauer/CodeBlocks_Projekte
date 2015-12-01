@@ -34,6 +34,34 @@ void Bank::delAccount(string owner){
 		}
 	}
 }
+
+void Bank::delAccount(Account& account)
+{
+	vector<Account*>::iterator it;
+
+	for (it = accounts_.begin(); it != accounts_.end(); it++)
+	{
+		if (*it == &account)
+		{
+			accounts_.erase(it);
+			return;
+		}
+	}
+}
+
+void Bank::delAccount(double reqAmount){
+    vector<Account*>::iterator it;
+
+    for(it = accounts_.begin(); it != accounts_.end(); it++){
+        if(((*it)->getAmount()) < reqAmount){
+            delete *it;
+            accounts_.erase(it);
+            it--;   //weil accounts_ liste jetzt ein Element weniger hat.
+        }
+    }
+}
+
+
 int Bank::addAccount (string owner, double d){
     Account* acc = new Account(owner, d);
     accounts_.push_back(acc);
@@ -65,12 +93,19 @@ Account& Bank::getMaxAccount(){
 }
 
 double Bank::getStandardDeviation(){
-    double average = getAverageAmount();
-    double sum = 0;
-    for(int i = 0; i < accounts_.size(); i++){
-        sum += pow((accounts_[i]->getAmount() + average), 2);
+    vector<Account*>::iterator it;
+    double average = this->getAverageAmount();
+    double diff = 0.0;
+
+    if(accounts_.size() > 1){
+        for(it = accounts_.begin(); it != accounts_.end(); it++){
+            diff = (average - (*it)->getAmount()) * (average - (*it)->getAmount());
+        }
+        diff /= accounts_.size();
+        return sqrt(diff);
+    }else{
+        return 0;
     }
-    return sqrt((1/accounts_.size()) * sum);
 }
 
 void Bank::charges(double d)
@@ -88,7 +123,7 @@ double Bank::getAverageAmount(){
     double ret = 0.0;
 
     if(accounts_.size() > 1){
-        for(int i; i < accounts_.size(); i++){
+        for(int i = 0; i < accounts_.size(); i++){
             ret += accounts_[i]->getAmount();
         }
         ret /= accounts_.size();
@@ -96,22 +131,10 @@ double Bank::getAverageAmount(){
     return ret;
 }
 
-void Bank::delAccount(Account& account)
-{
-	vector<Account*>::iterator it;
-	for (it = accounts_.begin(); it != accounts_.end(); it++)
-	{
-		if (*it == & account)
-		{
-			accounts_.erase(it);
-			return;
-		}
-	}
-}
-
 void Bank::addInterest(double d)
 {
 	vector<Account*>::iterator it;
+
 	for (it = accounts_.begin(); it != accounts_.end(); it++)
 	{
 		double newValue = (*it)->getAmount() + d;
@@ -122,7 +145,7 @@ void Bank::addInterest(double d)
 
 void Bank::addAccount(Account& account)
 {
-	accounts_.push_back(&account);	//!!!!!!!!!!!!!!!!!
+	accounts_.push_back(&account);
 }
 
 string Bank::toString() const
