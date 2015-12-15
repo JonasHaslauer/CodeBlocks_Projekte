@@ -32,6 +32,16 @@
 #define CLS system("clear")
 #define PAUSE printf("\nweiter mit enter ... ");fgetc(stdin)
 
+// --------------- Tabellen ------------------------------------------------------------
+static ADB_IDX adb_idx_tabelle[MAXELEMENTS]; // Indextabelle: nickname und offset
+static int  adb_nrecords;                   //anzahl der gelesenen Datensaetze
+
+// --------------- File: ADressbuch ----------------------------------------------------
+static FILE * adb_fp;                       //adb_open() und adb_close() adb_get_email()
+
+// --------------- Funktionen intern ---------------------------------------------------
+static int cmp (ADB_IDX* a, ADB_IDX* b);    //Vergleichsfunktion f. qsort() und bsearch()
+
 int main(int argc, char *argv[])
 {
     enum {false, true} ende= false;
@@ -61,7 +71,7 @@ int main(int argc, char *argv[])
             fgets (input, 256, stdin);
             input[strlen(input) -1] = '\0';
 
-            ret= adb_open (input);
+            ret = adb_open (input);
             if (ret == -1)
                 perror (input);
 

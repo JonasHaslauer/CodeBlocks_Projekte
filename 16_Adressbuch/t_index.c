@@ -6,19 +6,20 @@
 #include <stdio.h>
 
 /* -- Erstelle die Indextabelle ----------------- */
-int make_index(FILE* fp, long *index_tab, int max_ind)
 /*FILE *fp;          Zu indizierende Datei */
 /*long *index_tab;   Indextabelle */
 /*int max_ind;       max. Anzahl Indizes */
+int make_index(FILE* fp, long *index_tab, int max_ind)
 {
-    long *next_ptr=index_tab,
-          *last_ptr= index_tab + max_ind -1;  /* Zeiger auf Ende der Indextabelle */
-    int c, lastch;
+    long    *next_ptr = index_tab,
+            *last_ptr = index_tab + max_ind -1;  /* Zeiger auf Ende der Indextabelle */
+    int     c, lastch;
 
-    for (lastch='\n'; c=getc(fp),c!=EOF; lastch=c)
-        if (lastch=='\n')   /* -- rette Position der Zeile */
+    //lastch = getc (nächsten char = Buchstaben lesen), solange c nicht endOfFile
+    for (lastch = '\n'; c = getc(fp),c != EOF; lastch = c)
+        if (lastch == '\n')   /* -- rette Position der Zeile */
             if(next_ptr <= last_ptr) /* -- solange Platz ist */
-                *next_ptr++= ftell(fp)-1;
+                *next_ptr++ = ftell(fp)-1; //next ptr inkrementieren | ftell gibt aktuelle Position des filestreams zurück
             else
                 break;
 
@@ -28,19 +29,18 @@ int make_index(FILE* fp, long *index_tab, int max_ind)
 
 
 /* -- Drucke eine Zeile ------------------------------------ */
-void print_line (FILE* fp, long *index_tab, int lineno)
 /*FILE *fp;           Datei, die angesehen wird */
 /*long *index_tab;     Indextabelle */
 /*int lineno;         Nummer der zu druckenden Zeile */
+void print_line (FILE* fp, long *index_tab, int lineno)
 {
     int c;
 
-    if (fseek(fp,index_tab[lineno],0) !=0) /* -- Gehe zur Zeile */
+    if (fseek(fp, index_tab[lineno], 0) != 0) /* -- Gehe zur Zeile */
         fprintf(stderr, "Kann Zeile %d an %ld nicht lesen\n",
                 lineno,index_tab[lineno]);
-    else
-    {
-        while(c=getc(fp), c!= EOF && c!= '\n') /* drucke Zeile */
+    else{
+        while(c = getc(fp), c != EOF && c != '\n') /* drucke Zeile */
             putchar(c);
         putchar('\n');
     }
@@ -59,10 +59,10 @@ main(int argc, char *argv[])
     FILE *fp;
     void print_line();
 
-    if (argc !=2)
+    if (argc != 2)
         fprintf(stderr, "Verwendung: %s Dateiname\n", argv[0]);
 
-    else if (fp= fopen(argv[1], "r"), fp != NULL)
+    else if (fp = fopen(argv[1], "r"), fp != NULL)
     {
         if ((lines = make_index(fp,index_tab, MAXINDEX)) != 0)
             do

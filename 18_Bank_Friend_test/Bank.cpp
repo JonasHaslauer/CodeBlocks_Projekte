@@ -81,6 +81,7 @@ Account& Bank::getAccount(int nr){
 
 Account& Bank::getMaxAccount(){
     double currMax = -1.0;
+
     int currIndex = -1;
 
     for(int i = 0; i < accounts_.size(); i++){

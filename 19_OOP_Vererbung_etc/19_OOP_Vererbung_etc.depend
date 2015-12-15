@@ -1,0 +1,44 @@
+# depslib dependency file v1.0
+1449157893 source:/home/jonas/Dokumente/FSST/19_OOP_Vererbung_etc/main.cpp
+	<iostream>
+	<iomanip>
+	"Person.h"
+	"Worker.h"
+	"Manager.h"
+	"Seller.h"
+	"Company.h"
+
+1449154873 /home/jonas/Dokumente/FSST/19_OOP_Vererbung_etc/include/Worker.h
+	<string>
+	"Person.h"
+
+1449158517 /home/jonas/Dokumente/FSST/19_OOP_Vererbung_etc/include/Person.h
+	<string>
+
+1449155386 source:/home/jonas/Dokumente/FSST/19_OOP_Vererbung_etc/src/Person.cpp
+	"Person.h"
+	<sstream>
+
+1449155478 source:/home/jonas/Dokumente/FSST/19_OOP_Vererbung_etc/src/Worker.cpp
+	"Worker.h"
+	<sstream>
+
+1449156620 source:/home/jonas/Dokumente/FSST/19_OOP_Vererbung_etc/src/Manager.cpp
+	"Manager.h"
+	<sstream>
+
+1449156566 /home/jonas/Dokumente/FSST/19_OOP_Vererbung_etc/include/Manager.h
+	<string>
+	"Person.h"
+
+1449156716 source:/home/jonas/Dokumente/FSST/19_OOP_Vererbung_etc/src/Seller.cpp
+	"Seller.h"
+	<sstream>
+
+1449156690 /home/jonas/Dokumente/FSST/19_OOP_Vererbung_etc/include/Seller.h
+	"Worker.h"
+
+1449158382 /home/jonas/Dokumente/FSST/19_OOP_Vererbung_etc/include/Company.h
+	<vector>
+	"Person.h"
+

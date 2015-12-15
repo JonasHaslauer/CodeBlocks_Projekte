@@ -1,0 +1,9 @@
+# depslib dependency file v1.0
+1449224032 source:/home/jonas/Dokumente/FSST/16_Adressbuch/t_adb1_tests_c.c
+	<stdio.h>
+	<string.h>
+	<errno.h>
+	"adb1.h"
+
+1449224009 /home/jonas/Dokumente/FSST/16_Adressbuch/adb1.h
+
