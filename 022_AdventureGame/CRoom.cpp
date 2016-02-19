@@ -11,6 +11,10 @@ void CRoom::moveto(string& strRoom)
         return;
     }
 
+    //Hier weil es sonst nicht funktioniert, weiss nicht warum
+    fin.seekg(ios::beg);
+    fin.clear();
+
     readRoomInfo(strRoom);
 }
 
@@ -28,7 +32,7 @@ void CRoom::readRoomInfo(string& aRoom)
 
     while(getline(fin, strLine, '\n'))
     {
-
+        cout << strRoom << " == " << strLine << endl;
         if(strLine == strRoom)
         {
             getline(fin, strRoomDescription, '*');
