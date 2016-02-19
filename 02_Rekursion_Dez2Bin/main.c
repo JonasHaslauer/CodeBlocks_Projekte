@@ -10,7 +10,7 @@ int main()
 }
 
 void dez2bin(int n){
-    if(n/2 != 0)
+    if(n / 2 != 0)
         dez2bin(n/2);
 
     printf("%d", n%2);

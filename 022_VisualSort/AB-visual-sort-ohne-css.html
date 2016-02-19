@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+	
+<head>
+<title>Visualisierung von Algorithmen</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>	
+<header>
+  <h1>Visualisierung von Algorithmen</h1>
+</header>	
+
+<p>by NAME (2015)</p>
+
+<p>
+TODO:
+<ol >
+<li>see and study: <a href="http://www.gf-webdesign.de/sortieralgorithmen/sortieralgorithmen.htm">http://www.gf-webdesign.de/sortieralgorithmen/sortieralgorithmen.htm</a></li>
+<li>implement quicksort (with performance/duration info): <a href="http://www.vogella.com/tutorials/JavaAlgorithmsQuicksort/article.html">http://www.vogella.com/tutorials/JavaAlgorithmsQuicksort/article.html</a></li>
+<li>see javascript tutorial: <a href="http://www.w3schools.com/js/default.asp">http://www.w3schools.com/js/default.asp</a></li>
+<li>study w3css and optimize your web-design: <a href="http://www.w3schools.com/w3css/default.asp">http://www.w3schools.com/w3css/default.asp</a></li>
+</ol>
+</p>
+
+
+
+<p>First click shuffle and then click a 'sort' button to handle animation</p>
+
+<form>
+<input type="button" value="shuffle" onclick="shuffle();" />
+<input type="button" value="bubbleSort" onclick="start_bubblesort();" />
+<input type="button" value="quickSort" onclick="start_quicksort();" />
+<input type="button" value="selectionSort" onclick="start_selectionsort();" />
+<input type="button" value="shellSort" onclick="start_shellsort();" />
+</form>
+
+<p id="duration">
+duration ...
+</p>
+
+<p>
+<canvas id="canvas" width="600" height="400" style="background-color:blue"></canvas>
+</p>
+
+<p>
+See also:
+<ul>
+<li><a href="http://www.gf-webdesign.de/sortieralgorithmen/sortieralgorithmen.htm">http://www.gf-webdesign.de/sortieralgorithmen/sortieralgorithmen.htm</a></li>
+<li><a href="http://sortieralgorithmen.de">http://sortieralgorithmen.de</a></li>
+<li><a href="http://www.vogella.com/tutorials/JavaAlgorithmsQuicksort/article.html">http://www.vogella.com/tutorials/JavaAlgorithmsQuicksort/article.html</a></li>
+<li><a href="http://www.w3schools.com/w3css/default.asp">http://www.w3schools.com/w3css/default.asp</a></li>
+</ul>
+</p>
+  
+
+<footer>
+<p>NAME (2015)</p>
+</footer> 
+
+   
+<script>
+var canvas = document.getElementById("canvas");
+var gc = canvas.getContext("2d");
+var width= document.getElementById("canvas").getAttribute("width");
+var height= document.getElementById("canvas").getAttribute("height");
+
+// time measure (duration)
+var start;
+var elapsed;
+
+// the Array to sort
+var points = new Array(600);
+
+
+function paint() {
+	gc.fillStyle = "white";
+	gc.fillRect(0, 0, width,height);
+
+	gc.fillStyle = "black";
+	for (i=0; i < points.length; i++){
+		gc.beginPath();
+		gc.moveTo(i,height);
+		gc.lineTo(i,height-points[i]);
+		gc.stroke();
+	}
+}
+
+function shuffle() {
+	gc.fillStyle = "white";
+	gc.fillRect(0, 0, width, height);
+	
+	gc.fillStyle = "black";
+	for (i=0; i< points.length; i++){
+		points[i] = Math.floor((Math.random()*1000)) % height;
+		gc.fillRect(i, points[i], 2, 2);
+	}
+	paint();
+}
+    
+
+// 
+// bubblesort
+// --------------------------------------------------------------
+function start_bubblesort() {	
+	start= new Date().getTime();
+	bubblesort();
+}
+
+function bubblesort() {	
+	var fertig= true;
+	var len = points.length;
+	for ( i=0; i < len -1; i++){
+		if (points[i] > points[i+1]){
+			var help;
+
+			//austauschen
+			//löschen				
+			gc.fillStyle = "blue";
+			gc.fillRect(i, points[i],2,2);
+			gc.fillRect(i+1, points[i+1],2,2);
+
+			help = points[i];
+			points[i] = points[i+1];
+			points[i+1] = help;
+
+			fertig = false;
+
+			gc.fillStyle = "yellow";
+			gc.fillRect(i, points[i], 2, 2);
+			gc.fillRect(i+1, point[+1],2,2);				
+		}
+	}
+	
+	// nochmals? 
+	if (fertig==false)
+		setTimeout(bubblesort, 10);  // in 10 ms nochmals sortieren
+	else {
+		elapsed= new Date().getTime() - start;
+		document.getElementById("duration").innerHTML= "duration " + elapsed + " ms";
+	}
+}
+
+
+// 
+// quicksort
+// --------------------------------------------------------------
+function start_quicksort(){
+	var len = points.length;
+
+	start = new Date().getTime();
+	quicksort(0, len - 1);
+}
+
+function quicksort(left, right){
+	var teiler;
+	if(left < right){
+		paint();
+		teiler = quickTeile(left, right);
+		quicksort(left, teiler - 1);
+		quicksort(teiler + 1, right);
+	}
+}
+
+function quickTeile(left, right){
+	var i = links;
+	var j = rechts - 1;
+	var pivot = points[rechts];
+	var buffer;
+	
+	do {
+		while (points[i] <= pivot && i < rechts) {
+			i++;
+		}
+		while (points[j] >= pivot && j > links) {
+			j--;
+		}
+		if (i < j) {
+			buffer = points[i];
+			points[i] = points[j];
+			points[j] = buffer;
+		}
+	} while (i < j);
+
+	if (points[i] > pivot) {
+		buffer = points[rechts];
+		points[rechts] = points[i];
+		points[i] = buffer;
+	}
+
+	return i;
+}
+
+// 
+// SelectionSort
+// --------------------------------------------------------------
+function start_selectionsort(){
+	alert("SelectionSort: Not implemented!");
+}
+
+function selectionsort(){
+
+}
+
+// 
+// ShellSort
+// --------------------------------------------------------------
+function start_shellsort(){
+	alert("ShellSort: Not implemented!");
+}
+function shellsort(){
+
+}
+
+</script>
+</body>
+</html>

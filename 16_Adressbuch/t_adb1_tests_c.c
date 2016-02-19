@@ -31,6 +31,7 @@
 
 #define CLS system("clear")
 #define PAUSE printf("\nweiter mit enter ... ");fgetc(stdin)
+#define LINE_LENGTH 256
 
 // --------------- Tabellen ------------------------------------------------------------
 static ADB_IDX adb_idx_tabelle[MAXELEMENTS]; // Indextabelle: nickname und offset
@@ -113,4 +114,59 @@ int main(int argc, char *argv[])
     }//while
 
     return 0;
+}
+
+/** öffnet die Email-Adressdatenbankdatei
+		<br>erstellt eine Index-Tabelle mit folg. Aufbau
+		<br>nickname | Beginn des Datensatzes in der Email-Adressdatenbankdatei
+		<br>nickname | Beginn des Datensatzes in der Email-Adressdatenbankdatei
+		<br>sortiert die Index-Tabelle nach nickname
+*  @param [in] filename der Dateiname
+*  @return int  gibt die Anzahl der gelesenen Datenzätze zurück,
+*  @return -1 im Fehlerfall; 1 OK
+*/
+int adb_open (const char * filename){
+    int ctr = 0;
+    char[LINE_LENGTH] c;
+
+    // ftell gibt aktuelle Position des filestreams zurück
+    while((c != EOF)){
+        c = getc(filename);
+        if(c == '\n'){
+            adb_idx_tabelle.nickname =
+        }
+    }
+}
+
+
+
+/** gibt eine Liste {nickname :: emailadresse CRLF} auf FILE* aus
+*  @param [in] fp der Ausgabestrom
+*  @return void
+*/
+void adb_list (FILE *fp){
+
+}
+
+
+
+/** gibt die entsprechende email-adresse aus
+*		zuerst wird in der index-tabelle binär nach nickname gesucht
+* 		dann wird mittels des entsprechenden offset aus der
+*		Email-Adressdatenbankdatei die email-adresse ermittelt
+*  @param [in] nickname
+*  @param [out] email, wenn nicht gefunden ist email empty
+*  @return void
+*/
+void adb_get_email (const char* nickname, char* email){
+
+}
+
+
+/** schliesst die Datei
+*  @param void
+*  @return void
+*/
+void adb_close(void){
+
 }

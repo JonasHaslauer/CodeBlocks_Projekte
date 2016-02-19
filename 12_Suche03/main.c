@@ -44,7 +44,7 @@ int vergl_persnr(const void* a, const void*b)
 int main()
 {
     // WEIL die Arrays für die binäre Suche sortiert sein müssen,
-    //	verwenden wir 2 Arrays:
+    // verwenden wir 2 Arrays:
 
     TPERSON wirName[5]=
     {

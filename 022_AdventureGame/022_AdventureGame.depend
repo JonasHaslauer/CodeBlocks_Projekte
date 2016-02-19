@@ -1,0 +1,36 @@
+# depslib dependency file v1.0
+1455811700 source:/home/jonas/Dokumente/FSST/022_AdventureGame/CGame.cpp
+	"CGame.h"
+	<iostream>
+	<string>
+	<cstdlib>
+	<stdio.h>
+	<stdlib.h>
+
+1455807523 /home/jonas/Dokumente/FSST/022_AdventureGame/CGame.h
+	"CRoom.h"
+	<vector>
+	<fstream>
+
+1455811353 /home/jonas/Dokumente/FSST/022_AdventureGame/CRoom.h
+	<fstream>
+	<string>
+	<vector>
+	"CItem.h"
+
+1455881344 source:/home/jonas/Dokumente/FSST/022_AdventureGame/CRoom.cpp
+	"CRoom.h"
+	<string>
+	<iostream>
+
+1454596214 source:/home/jonas/Dokumente/FSST/022_AdventureGame/main.cpp
+	"CGame.h"
+
+1455881228 /home/jonas/Dokumente/FSST/022_AdventureGame/CItem.h
+	<string>
+	<vector>
+	<iostream>
+
+1455881259 source:/home/jonas/Dokumente/FSST/022_AdventureGame/CItem.cpp
+	"CItem.h"
+

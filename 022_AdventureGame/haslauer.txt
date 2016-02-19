@@ -1,0 +1,79 @@
+<Start> Entrance
+
+<Entrance>
+_____________________________________________________________
+You are in front of the HTL. You can either enter the HTL or go to
+the main station.
+_____________________________________________________________*
+
+<north> None
+<east>  Ground_Floor
+<south> Main_Station
+<west> None
+<show> 2 Obusticket Money
+<items> 2 Obusticket 100 Money 10
+
+<Entrance|Obusticket>
+_____________________________________________________________
+With this ticket you can go to the main station by bus.
+_____________________________________________________________*
+
+<Entrance|Money>
+_____________________________________________________________
+Some money.
+_____________________________________________________________*
+
+<Ground_Floor>
+_____________________________________________________________
+You are in the entrance area now. Where do you want to go?
+_____________________________________________________________*
+
+<north> Buffet
+<east>  Floor_1
+<south> None
+<west> Entrance
+<items> 1 Bread 5 
+
+<Buffet>
+_____________________________________________________________
+There is food available here.
+_____________________________________________________________*
+
+<north> Ground_Floor
+<east>  Floor_1
+<south> None
+<west> None
+<items> None 
+
+<Floor_1>
+_____________________________________________________________
+"Welcome to the first floor!" says the teacher. "There is nothing here, so leave"
+_____________________________________________________________*
+
+<north> None
+<east>  Ground_Floor
+<south> Floor_2
+<west> None
+<items> None 
+
+<Floor_2>
+_____________________________________________________________
+Upon you entering the floor a young student comes up to you and tells you to leave.
+_____________________________________________________________*
+
+<north> None
+<east>  Ground_Floor
+<south> Floor_1
+<west> Floor_3
+<items> None 
+
+<Floor_3>
+_____________________________________________________________
+As you come out of the stairway some screams "GET OUT!"
+_____________________________________________________________*
+
+<north> None
+<east>  None
+<south> None
+<west> Floor_2
+<items> None 

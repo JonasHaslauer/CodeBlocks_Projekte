@@ -72,7 +72,7 @@ Account& Bank::getAccount(int nr){
     vector<Account*>::iterator it;
 	for (it = accounts_.begin(); it != accounts_.end(); it++)
 	{
-		if (nr==(*it)->number_)
+		if (nr == (*it)->number_)
 		{
 			return **it;
 		}
