@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<fragen>
+
+<frage>
+<fragentext>
+BEISPIEL: SINGLE-CHOICE-Frage
+------------------------------------------------------------
+Welche Behauptung a oder b oder c ist wahr?
+
+a ... Referenzen werden in cpp oft verwendet
+b ... Call by value ist schneller als call by reference
+c ... Pointer werden in cpp nicht mehr benötigt
+</fragentext>
+<loesungstext>a</loesungstext>
+<punkte>10</punkte>
+</frage>
+
+<frage>
+<fragentext>
+BEISPIEL: SINGLE-CHOICE-Frage
+------------------------------------------------------------
+Der Destruktor der Klasse Person lautet
+a) Person::~Person() b) ~Person::Person() 
+</fragentext>
+<loesungstext>a</loesungstext>
+<punkte>10</punkte>
+</frage>
+
+
+<frage>
+<fragentext>
+BEISPIEL: MULTIPLE-CHOICE: mit , trennen
+------------------------------------------------------------
+Korrekt sind:
+a) if (x==7) ...  b) for(int x=1;x!=7;x++) ... c) if(int x==7) .... d) using NameSpace std;
+</fragentext>
+<loesungstext>a,b</loesungstext>
+<punkte>20</punkte>
+</frage>
+
+
+<frage>
+<fragentext>
+BEISPIEL: SINGLE-LÜCKEN-Frage: 
+------------------------------------------------------------
+Was gehört statt ??? geschrieben?
+...
+Verwende call by value:
+...
+void foo(Person persons);
+...
+Person me("maxi");
+...
+foo(???);
+
+</fragentext>
+<loesungstext>me</loesungstext>
+<punkte>10</punkte>
+</frage>
+
+
+<frage>
+<fragentext>
+BEISPIEL: MULTIPLE_LUECKEN-Frage: Antworten mit , trennen
+------------------------------------------------------------
+Was gehört statt ??? geschrieben?
+Thema: Vererbung
+
+class Worker : ??? Person{ ...};
+...
+Worker::Worker (string name, int age) : ????? (name,age) {...}
+</fragentext>
+<loesungstext>public,Person</loesungstext>
+<punkte>20</punkte>
+</frage>
+
+<frage>
+<fragentext>
+BEISPIEL: wahr oder falsch Frage:
+------------------------------------------------------------
+Beantworten Sie die folgende Frage mit wahr oder falsch.
+
+CPP unterstützt Mehrfachvererbung
+</fragentext>
+<loesungstext>wahr</loesungstext>
+<punkte>10</punkte>
+</frage>
+
+
+</fragen>

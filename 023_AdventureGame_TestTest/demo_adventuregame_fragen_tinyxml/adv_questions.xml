@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fragen>
+<frage>
+<fragentext>
+BEISPIEL: SINGLE-CHOICE-Frage
+Objekte, die nicht mehr benötigt werden, müssen gelöscht
+werden. Dazu wird eine boolsche Variable remove verwendet. 
+In welcher Klasse wird Sie definiert?
+a) Sprite b) Rocket c) GamePanel d) Explosion
+</fragentext>
+<loesungstext>a</loesungstext>
+<punkte>10</punkte>
+</frage>
+
+<frage>
+<fragentext>
+BEISPIEL: SINGLE-CHOICE-Frage
+Das tatsächliche Löschen der Objekte erfolgt in
+a) GamePanel.doLogic() b) Rocket.doLogic 
+</fragentext>
+<loesungstext>a</loesungstext>
+<punkte>10</punkte>
+</frage>
+
+
+<frage>
+<fragentext>
+BEISPIEL: MULTIPLE-CHOICE: mit , trennen
+Von Ihnen programmierte Klassen im Spiel:
+a) GamePanel b) Rocket c) Image d) Movable
+</fragentext>
+<loesungstext>a,b</loesungstext>
+<punkte>20</punkte>
+</frage>
+
+
+<frage>
+<fragentext>
+BEISPIEL: SINGLE-LÜCKEN-Frage: 
+Was gehört statt ??? geschrieben.
+public class GamePanel extends JPanel ??? Runnable{...}
+</fragentext>
+<loesungstext>implements</loesungstext>
+<punkte>10</punkte>
+</frage>
+
+
+<frage>
+<fragentext>
+BEISPIEL: MULTIPLE_LÜCKEN-Frage: Antworten mit , trennen
+Was gehört statt ??? geschrieben.
+Thema: Threads erzeugen
+public class GamePanel ... Runnable{
+	...
+	public void ??? (){ 
+		// hier läuft der Thread
+		...
+	}
+	...
+	
+	public void init(){
+		Thread t= new Thread(???);
+		t.start();
+	}
+}
+</fragentext>
+<loesungstext>run,this</loesungstext>
+<punkte>20</punkte>
+</frage>
+
+<frage>
+<fragentext>
+BEISPIEL: WAHR od. FALSCH Frage: 
+wahr bzw. falsch eingeben: 
+Java unterstützt Mehrfachevererbung
+</fragentext>
+<loesungstext>falsch</loesungstext>
+<punkte>10</punkte>
+</frage>
+
+
+</fragen>
