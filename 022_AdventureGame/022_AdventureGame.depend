@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1455882845 source:/home/jonas/Dokumente/FSST/022_AdventureGame/CGame.cpp
+1457009735 source:/home/jonas/Dokumente/FSST/022_AdventureGame/CGame.cpp
 	"CGame.h"
 	<iostream>
 	<string>
@@ -7,18 +7,20 @@
 	<stdio.h>
 	<stdlib.h>
 
-1455807523 /home/jonas/Dokumente/FSST/022_AdventureGame/CGame.h
+1457012803 /home/jonas/Dokumente/FSST/022_AdventureGame/CGame.h
 	"CRoom.h"
+	"CPlayer.h"
 	<vector>
 	<fstream>
 
-1455811353 /home/jonas/Dokumente/FSST/022_AdventureGame/CRoom.h
+1457015223 /home/jonas/Dokumente/FSST/022_AdventureGame/CRoom.h
 	<fstream>
 	<string>
 	<vector>
 	"CItem.h"
+	"CMonster.h"
 
-1455883024 source:/home/jonas/Dokumente/FSST/022_AdventureGame/CRoom.cpp
+1457012187 source:/home/jonas/Dokumente/FSST/022_AdventureGame/CRoom.cpp
 	"CRoom.h"
 	<string>
 	<iostream>
@@ -33,4 +35,17 @@
 
 1455881259 source:/home/jonas/Dokumente/FSST/022_AdventureGame/CItem.cpp
 	"CItem.h"
+
+1457012971 source:/home/jonas/Dokumente/FSST/022_AdventureGame/CMonster.cpp
+	"CMonster.h"
+
+1457013003 /home/jonas/Dokumente/FSST/022_AdventureGame/CMonster.h
+	<string>
+	<vector>
+
+1456907090 source:/home/jonas/Dokumente/FSST/022_AdventureGame/CPlayer.cpp
+	"CPlayer.h"
+
+1456907110 /home/jonas/Dokumente/FSST/022_AdventureGame/CPlayer.h
+	<string>
 

@@ -22,17 +22,19 @@ void CRoom::readRoomInfo(string& aRoom)
 {
     string strLine = "";
     string strTemp = "";
+    string strMonsterName = "";
     int itemValue = 0, iTemp;
     string strRoom = "<" + aRoom + ">";
     CItem* tempItem;
     showable.clear();
+
+    monsterInRoom = false;
 
     fin.seekg(ios::beg);
     fin.clear();
 
     while(getline(fin, strLine, '\n'))
     {
-        cout << strRoom << " == " << strLine << endl;
         if(strLine == strRoom)
         {
             getline(fin, strRoomDescription, '*');
@@ -75,16 +77,68 @@ void CRoom::readRoomInfo(string& aRoom)
                 }
             }
 
+            fin >> strTemp >> strMonsterName;
+            if(this->findMonster(strMonsterName, aRoom) == -1){
+                if(this->addMonster(aRoom, strMonsterName) == 1){
+                    monsterInRoom = true;
+                }else{
+                    monsterInRoom = false;
+                }
+            }else{
+                monsterInRoom = true;
+            }
+
+
             return;
         }
     }
 
+
+
 }
 
+int CRoom::findMonster(string name, string room)
+{
+    if(monsters->size() == 0){
+        return -1;
+    }
 
+    for(int i = 0; i < monsters->size() / monsters[0].size(); i++)
+    {
+        if(monsters->at(i)->getName() == name && monsters->at(i)->getRoom() == room)
+        {
+            return i;
+        }
+    }
+    return -1;
+}
+
+int CRoom::addMonster(string room, string monsterName){
+    string strTag = "<" + room + "|" + monsterName + ">";
+    string strTemp = "";
+    int health, damage;
+    CMonster* tempMonster;
+
+    fin.seekg(ios::beg);
+    fin.clear();
+
+    while(getline(fin, strTemp, '\n'))
+    {
+        if(strTemp == strTag){
+            fin >> strTemp >> health >> strTemp >> damage >> strTemp >> strTemp;
+            tempMonster = new CMonster(monsterName, health, damage, strTemp, room);
+            monsters->push_back(tempMonster);
+            return 1;   //Monster found and added
+        }
+    }
+    return -1;   //Monster not found
+}
 
 void CRoom::display(void) const
 {
+    if(this->monsterInRoom){
+
+    }
     cout << strRoomDescription << endl << endl << "Locations (n, e, s, w): " << strRoomNorth << ", " << strRoomEast << ", " << strRoomSouth << ", " << strRoomWest << endl << endl;
 }
 

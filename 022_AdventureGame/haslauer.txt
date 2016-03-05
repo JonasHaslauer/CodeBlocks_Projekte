@@ -1,5 +1,10 @@
 <Start> Entrance
 
+<Player>
+<name> GenericPlayer
+<health> 1000
+<damage> 100
+
 <Entrance>
 _____________________________________________________________
 You are in front of the HTL. You can either enter the HTL or go to
@@ -12,6 +17,12 @@ _____________________________________________________________*
 <west> None
 <show> 2 Obusticket Money
 <items> 2 Obusticket 100 Money 10
+<enemy> Zinger
+
+<Entrance|Zinger>
+<health> 101
+<damage> 1
+<attack> Zinger pokes you.
 
 <Entrance|Obusticket>
 _____________________________________________________________
@@ -22,6 +33,12 @@ _____________________________________________________________*
 _____________________________________________________________
 Some money.
 _____________________________________________________________*
+
+<Entrance|Zinger>
+<health> 150
+<damage> 1
+<attack> Zinger attacks you!*
+
 
 <Ground_Floor>
 _____________________________________________________________
